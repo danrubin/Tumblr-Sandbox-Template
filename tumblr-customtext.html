@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <!-- DEFAULT TEXT -->
+        <meta name="text:Flickr Username" content=""/>
+    </head>
+    <body>
+        {block:IfFlickrUsername}
+            <div id="flickr_widget">
+                <script type="text/javascript"
+                src="http://flickr.com/widget?user={text:Flickr Username}">
+                </script>
+            </div>
+        {/block:IfFlickrUsername}
+    </body>
+</html>

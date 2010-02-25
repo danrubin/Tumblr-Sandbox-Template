@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <h1>{Title}</h1>
+
+        {block:DayPage}
+            <h2>{Month} {DayOfMonth}, {Year}</h2>
+        {/block:DayPage}
+
+        <ol id="posts">
+            {block:Posts}
+                ...
+            {/block:Posts}
+        </ol>
+
+        <div id="footer">
+            {block:Pagination}
+                {block:PreviousPage}
+                    <a href="{PreviousPage}">&#171; Previous</a>
+                {/block:PreviousPage}
+
+                {block:NextPage}
+                    <a href="{NextPage}">Next &#187;</a>
+                {/block:NextPage}
+            {/block:Pagination}
+
+            {block:DayPagination}
+                {block:PreviousDayPage}
+                    <a href="{PreviousDayPage}">
+                        &#171; {ShortMonth} {DayOfMonth}
+                    </a>
+                {/block:PreviousDayPage}
+
+                {block:NextDayPage}
+                    <a href="{NextDayPage}">
+                        {ShortMonth} {DayOfMonth} &#187;
+                    </a>
+                {/block:NextDayPage}
+            {/block:DayPagination}
+        </div>
+    </body>
+</html>

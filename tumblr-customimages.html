@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <!-- DEFAULT IMAGE -->
+        <meta name="image:Background" content="http://static.tumblr.com/..."/>
+        <meta name="image:Header" content=""/>
+        
+        <style type="text/css">
+            body {
+                background: #2D567C url('{image:Background}');
+            }
+        </style>
+    </head>
+    <body>
+        {block:IfHeaderImage}<img src="{image:Header}"/>{/block:IfHeaderImage}
+        {block:IfNotHeaderImage}<h1>{Title}</h1>{/block:IfNotHeaderImage}
+    </body>
+</html>
